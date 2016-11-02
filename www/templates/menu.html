@@ -1,0 +1,23 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button></ion-nav-back-button>
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="side-menu21"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="right" id="side-menu21">
+    <ion-content padding="false" style="top:0px !important;" class="side-menu-right ">
+      <ion-list id="menu-list8">
+        <ion-item class="item-icon-left" id="menu-list-item23" ui-sref="menu.main" menu-close="">
+          <i class="icon ion-android-home"></i>Main</ion-item>
+        <ion-item class="item-icon-left" id="menu-list-item24" ui-sref="menu.profile" menu-close="">
+          <i class="icon ion-android-contact"></i>Profile</ion-item>
+      </ion-list>
+      <div class="spacer" style="width: 248px; height: 329px;"></div>
+      <a ui-sref="menu.login" menu-close="" id="menu-button11" class="button button-balanced  button-block">Log Out</a>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
