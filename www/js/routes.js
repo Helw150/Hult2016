@@ -30,12 +30,12 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.profile', {
-    url: '/profile',
+  .state('menu.audio', {
+    url: '/audio',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/profile.html',
-        controller: 'profileCtrl'
+        templateUrl: 'templates/audio.html',
+        controller: 'audioCtrl'
       }
     }
   })

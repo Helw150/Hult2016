@@ -1,13 +1,13 @@
-<ion-view title="Text" hide-back-button="true" id="page2" style="background-color:#FFFFFF;">
+<ion-view title="Audio" hide-back-button="true" id="page3" style="background-color:#FFFFFF;">
   <ion-content padding="true" class=" manual-remove-top-padding has-header" scroll="false">
     <div id="main-container2">
       <div>
-        <img src="{{current}}" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+	<button class="button button-block button-balanced" ng-click="play('http://www.stephaniequinn.com/Music/Commercial%20DEMO%20-%2013.mp3')">Play from internet</button>
       </div>
     </div>
     <form id="main-form5" class="list">
       <label class="item item-input" id="main-input9" name="input">
-        <input event-focus="click" type="text" placeholder="كلمة" id="textInput">
+        <input type="text" placeholder="كلمة" id="textInput">
       </label>
       <div id="main-button-bar1" class="button-bar">
         <ion-label id="main-button9" class="button button-assertive button-block" ng-click="failed()">حذف</ion-label>
