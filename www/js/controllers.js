@@ -96,7 +96,7 @@ function ($scope, focus, $timeout, $stateParams, $ionicPopup, i) {
             $scope.current = $scope.images[parseInt(i)];
         var myPopup = $ionicPopup.show(
             {
-                title: "",
+                title: "شكرا",
                 subtitle: "كان هذا السؤال تخطي",
                 scope: $scope,
             })
@@ -113,15 +113,96 @@ function ($scope, focus, $timeout, $stateParams, $ionicPopup, i) {
 function ($scope, $stateParams) {})
 
 .controller('audioCtrl',
-function ($scope, $stateParams, $cordovaMedia, $ionicLoading) {
+function ($scope, focus, $timeout, $stateParams, $ionicPopup, i, $cordovaMedia, $ionicLoading) {
+    $scope.audio = ["http://arabicquick.com/content/uploads/2014/11/ab_a31.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a32.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a33.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a34.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a35.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a36.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a37.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a38.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a39.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a40.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a41.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a42.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a43.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a44.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a45.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a46.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a47.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a48.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a49.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a50.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a51.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a52.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a53.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a54.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a55.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a56.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a57.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a58.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a59.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a60.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a61.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a62.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a63.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a64.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a65.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a66.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a67.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a68.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a69.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a70.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a71.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a72.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a73.mp3",
+		    "http://arabicquick.com/content/uploads/2014/11/ab_a74.mp3"]
+
+    $scope.current = $scope.audio[parseInt(i)];
+    $scope.failed = function (){
+	focus('textInput')
+        $scope.toClear = "";
+        document.getElementById("textInput").value = "";
+        i = parseInt(i) + 1;
+        $scope.current = $scope.audio[parseInt(i)];
+        var myPopup = $ionicPopup.show(
+            {
+                title: "اعتذارنا",
+                subtitle: "كان هذا السؤال تخطي",
+                scope: $scope,
+            })
+        $timeout(function()
+		 {
+                     myPopup.close();
+		 }, 500)
+    }
+    
+    $scope.solved = function (){
+	focus('textInput')
+        $scope.toClear = "";
+        document.getElementById("textInput").value = "";
+        i = parseInt(i) + 1;
+        $scope.current = $scope.audio[parseInt(i)];
+        var myPopup = $ionicPopup.show(
+            {
+                title: "شكرا",
+                subtitle: "كان هذا السؤال تخطي",
+                scope: $scope,
+            })
+        $timeout(function()
+		 {
+                myPopup.close();
+		 }, 500)
+    }
     
     $scope.play = function(src) {
-        var media = $cordovaMedia.newMedia(src);
+	
+        media = $cordovaMedia.newMedia(src);
         media.play();
-	$scope.$on("$destroy", function(){
+	$scope.$on("$stateChangeStart", function(){
             media.stop();
-    });
-    }
-
+	});
+    }    
 })
  
