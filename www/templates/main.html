@@ -1,27 +1,32 @@
 <ion-view title="Text" hide-back-button="true" id="page2" style="background-color:#FFFFFF;">
   <ion-content padding="true" class=" manual-remove-top-padding has-header" scroll="false">
-    <div id="main-container2">
-      <div>
-        <img src="{{current}}" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
-      </div>
-    </div>
-    <form id="main-form5" class="list">
-      <label class="item item-input" id="main-input9" name="input">
-        <input event-focus="click" type="text" placeholder="كلمة" id="textInput">
-      </label>
-      <div id="main-button-bar1" class="button-bar">
-        <ion-label id="main-button9" class="button button-assertive button-block" ng-click="failed()">حذف</ion-label>
-        <ion-label id="main-button10" class="button button-positive  button-block" ng-click="solved()">اقترح</ion-label>
-      </div>
-    </form>
+    <swipe-cards>
+      <swipe-card>
+	<div>
+          <div class="image">
+            <img ng-src="img/sample/img{{current}}.png" width="80%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+          </div>
+	  <form id="main-form5" class="list">
+    	    <label class="item item-input" id="main-input9" name="input">
+    	      <input event-focus="click" type="text" placeholder="كلمة" id="textInput">
+    	    </label>
+	    <div class="spacer" style="width: 248px; height: 10px;"></div>
+    	    <div id="main-button-bar1" class="button-bar">
+    	      <ion-label id="main-button9" class="button action-button animate red" ng-click="failed()">حذف</ion-label>
+    	      <ion-label id="main-button10" class="button action-button animate blue" ng-click="solved()">اقترح</ion-label>
+    	    </div>
+	  </form>
+        </div>
+      </swipe-card>
+    </swipe-cards>
     <div id="profile-container3" class="transparent">
       <div class="list card" id="profile-card21">
-        <ion-item class="item-avatar" id="profile-list-item6">
-          <img src="img/I2faXYbmTtWHudrbPXSV_favicon.jpg">
-          <h2>William Held</h2>
-          <p>Join Date</p>
-        </ion-item>
-        <div class="item item-body" id="profile-list-item-container2">
+	<ion-item class="item-avatar" id="profile-list-item6">
+	  <img src="img/I2faXYbmTtWHudrbPXSV_favicon.jpg">
+	  <h2>William Held</h2>
+	  <p>Join Date</p>
+	</ion-item>
+	<div class="item item-body" id="profile-list-item-container2">
           <ion-list id="profile-list5">
             <ion-item class="item-icon-left balanced" id="profile-list-item9">
               <i class="icon ion-social-usd"></i>9999999
