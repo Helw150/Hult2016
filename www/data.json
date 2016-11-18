@@ -1,0 +1,278 @@
+{
+    "_comment": "Based on Firebase JSON structure given at https://firebase.google.com/docs/database/android/structure-data, all items are stored in one file, for now.",
+    
+    "accounts": {
+        
+        "_comment": "Password item will store the hash value. Keys are the ID's, but in string",
+        
+        "741864": {
+            
+            "name": "Quraish Salama",
+            "password": 123456,
+            "correct": 4,
+            "incorrect": 1,
+            "pass": 0
+        
+        },
+
+        "139669": {
+            
+            "name": "Abyad Hosein",
+            "password": 123456,
+            "correct": 3,
+            "incorrect": 0,
+            "pass": 0
+        },
+        
+        "585047": {
+            
+            "name": "Rutaiba Baksh",
+            "password": 123456,
+            "correct": 4,
+            "incorrect": 0,
+            "pass": 1
+        
+        },
+        
+        "569429": {
+            
+            "name": "Majeeda Azzi",
+            "password": 123456,
+            "correct": 3,
+            "incorrect": 1,
+            "pass": 1
+        },
+        
+        "767949": {
+            
+            "name": "Israa Mansour",
+            "password": 123456,
+            "correct": 3,
+            "incorrect": 2,
+            "pass": 1
+        
+        },
+        
+        "303827": {
+            
+            "name": "Mawhiba Hoda",
+            "password": 123456,
+            "correct": 2,
+            "incorrect": 1,
+            "pass": 1
+        
+        },
+        
+        "265315": {
+            
+            "name": "Misfar Noorani",
+            "password": 123456,
+            "correct": 0,
+            "incorrect": 0,
+            "pass": 0
+        
+        }          
+    },
+    
+    "bundles": {
+
+        "D41018" : {
+            
+            "item_ids": ["65D41AEE93", "CC7B795CE2", "B6D561334D", "CA7082717F", "5D184841A0"],
+            "assigned_to": ["741864", "585047", "767949"],
+            "completed": true
+        },
+        
+        "6CEE96"  : {
+            
+            "item_ids": ["07D8D245FB", "4630BAEACD", "81697D9F0E", "D3C3790B48", "F471629EFE"],
+            "assigned_to": ["139669", "569429", "303827"],
+            "completed": false
+        },
+        
+        "F52C9E"  : {
+            
+            "item_ids": [ "031FB68AFB", "809F8983FC","B790AA9E1D"],
+            "assigned_to": [],
+            "completed": false
+        },        
+        
+    },
+    
+    "items": {
+    
+        "65D41AEE93": { 
+            "document_id": "D53DBC14",
+            "position": 0,
+            "answers": {
+                
+                "741864": "a",
+                "585047": "a",
+                "767949": "b"
+            
+            },
+            "agreed_answer": "a"
+        
+        },
+    
+        "07D8D245FB": {
+            "document_id": "D53DBC14",
+            "position": 1,
+            "answers": {
+                
+                "139669": "c",
+                "569429": "c",
+                "303827": "c"
+            
+            },
+            "agreed_answer": "c"
+        
+        },
+            
+        "CC7B795CE2": {
+            "document_id": "D53DBC14",
+            "position": 2,
+            "answers": {
+                
+                "741864": "a",
+                "585047": "a",
+                "767949": "b"
+            
+            },
+            "agreed_answer": "a"
+        
+        },
+            
+        "4630BAEACD": {
+            "document_id": "D53DBC14",
+            "position": 3,
+            "answers": {
+                
+                "139669": "d",
+                "569429": "d",
+                "303827": null
+            
+            },
+            "agreed_answer": "d"
+        
+        },
+            
+        "B6D561334D": {
+            "document_id": "D53DBC14",
+            "position": 4,
+            "answers": {
+                
+                "741864": "x",
+                "585047": null,
+                "767949": "x"
+            
+            },
+            "agreed_answer": "x"
+        
+        },
+            
+        "81697D9F0E": {
+            "document_id": "64ACCC62",
+            "position": 0,
+            "answers": {
+                
+                "139669": "h",
+                "569429": "h",
+                "303827": "h"
+            
+            },
+            "agreed_answer": "h"
+        
+        },
+            
+        "CA7082717F": {
+            "document_id": "64ACCC62",
+            "position": 1,
+            "answers": {
+                
+                "741864": "l",
+                "585047": "k",
+                "767949": "k"
+            
+            },
+            "agreed_answer": "k"
+        
+        },
+            
+        "D3C3790B48": {
+            "document_id": "64ACCC62",
+            "position": 2,
+            "answers": {
+                
+                "139669": "p",
+                "569429": "a",
+                "303827": "c"
+            },
+            "agreed_answer": null
+        
+        },
+            
+        "5D184841A0": {
+            "document_id": "64ACCC62",
+            "position": 3,
+            "answers": {
+                "741864": "a",
+                "585047": "a",
+                "767949": "a"
+            },
+            "agreed_answer": "a"
+        
+        },
+        
+        "F471629EFE": {
+            "document_id": "64ACCC62",
+            "position": 4,
+            "answers": {
+                "139669": "c",
+
+            }
+
+        },
+        
+        "031FB68AFB": {
+            "document_id": "42D7DD21",
+            "position": 0
+
+        },
+        
+        "809F8983FC": {
+            "document_id": "42D7DD21",
+            "position": 1,
+            "answers": {
+
+            },
+            "agreed_answer": null
+        },
+        
+        "B790AA9E1D": {
+            "document_id": "42D7DD21",
+            "position": 2,
+
+        }
+    },
+    
+    "documents": {
+    
+        "D53DBC14": {
+        
+            "owner": "govt",
+            "completed": true
+        }, 
+        
+        "64ACCC62": {
+            "owner": "abc",
+            "completed": false
+        },
+        
+        "42D7DD21": {
+            "owner": "xyz",
+            "completed": false
+        }
+    
+    }
+}
