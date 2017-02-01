@@ -17,71 +17,62 @@ angular.module('app.controllers', [])
 
    
 .controller('mainCtrl',
-function ($scope, focus, $timeout, $stateParams, $ionicPopup, i, $cordovaSQLite) {
-    
-    $scope.images = ["001",
-		     "002",
-		     "003",
-		     "004",
-		     "005",
-		     "006",
-		     "007",
-		     "008",
-		     "009",
-		     "010",
-		     "011",
-		     "012",
-		     "013",
-		     "014",
-		     "015",
-		     "016",
-		     "017",
-		     "018",
-		     "019",
-		     "020",
-		     "021",
-		     "022",
-		     "023",
-		     "024",
-		     "025",
-		     "026",
-		     "027",
-		     "028",
-		     "029",
-		     "030",
-		     "031",
-		     "032",
-		     "033",
-		     "034",
-		     "035",
-		     "036",
-		     "037",
-		     "038",
-		     "039",
-		     "040",
-		     "041",
-		     "042",
-		     "043",
-		     "044",
-		     "045",
-		     "046",
-		     "047",
-		     "048",
-		     "049",
-		     "050"]
+function ($scope, focus, $timeout, $stateParams, $ionicPopup, i) {
+    $scope.images = ["img/sample/img001.png",
+		     "img/sample/img002.png",
+		     "img/sample/img003.png",
+		     "img/sample/img004.png",
+		     "img/sample/img005.png",
+		     "img/sample/img006.png",
+		     "img/sample/img007.png",
+		     "img/sample/img008.png",
+		     "img/sample/img009.png",
+		     "img/sample/img010.png",
+		     "img/sample/img011.png",
+		     "img/sample/img012.png",
+		     "img/sample/img013.png",
+		     "img/sample/img014.png",
+		     "img/sample/img015.png",
+		     "img/sample/img016.png",
+		     "img/sample/img017.png",
+		     "img/sample/img018.png",
+		     "img/sample/img019.png",
+		     "img/sample/img020.png",
+		     "img/sample/img021.png",
+		     "img/sample/img022.png",
+		     "img/sample/img023.png",
+		     "img/sample/img024.png",
+		     "img/sample/img025.png",
+		     "img/sample/img026.png",
+		     "img/sample/img027.png",
+		     "img/sample/img028.png",
+		     "img/sample/img029.png",
+		     "img/sample/img030.png",
+		     "img/sample/img031.png",
+		     "img/sample/img032.png",
+		     "img/sample/img033.png",
+		     "img/sample/img034.png",
+		     "img/sample/img035.png",
+		     "img/sample/img036.png",
+		     "img/sample/img037.png",
+		     "img/sample/img038.png",
+		     "img/sample/img039.png",
+		     "img/sample/img040.png",
+		     "img/sample/img041.png",
+		     "img/sample/img042.png",
+		     "img/sample/img043.png",
+		     "img/sample/img044.png",
+		     "img/sample/img045.png",
+		     "img/sample/img046.png",
+		     "img/sample/img047.png",
+		     "img/sample/img048.png",
+		     "img/sample/img049.png",
+		     "img/sample/img050.png"]
 
-    $scope.current = $scope.images[parseInt(i)];    
-    
+    $scope.current = $scope.images[parseInt(i)];
     $scope.failed = function (){
 	focus('textInput')
         $scope.toClear = "";
-        var query = "INSERT INTO snippets (snippet_no, entry) VALUES (?,?)";
-    	$cordovaSQLite.execute(db, query, [parseInt(i), null]).then(function(res) {
-            console.log("INSERT ID -> " + res.insertId);
-        }, function (err) {
-            console.error(err);
-        });
-        
         document.getElementById("textInput").value = "";
         i = parseInt(i) + 1;
         $scope.current = $scope.images[parseInt(i)];
@@ -100,13 +91,6 @@ function ($scope, focus, $timeout, $stateParams, $ionicPopup, i, $cordovaSQLite)
     $scope.solved = function (){
 	focus('textInput')
         $scope.toClear = "";
-        var query = "INSERT INTO snippets (snippet_no, entry) VALUES (?,?)";
-        var entry = document.getElementById("textInput").value
-    	$cordovaSQLite.execute(db, query, [parseInt(i), entry]).then(function(res) {
-        	console.log("INSERT ID -> " + res.insertId);
-        	}, function (err) {
-            console.error(err);
-        	});
         document.getElementById("textInput").value = "";
         i = parseInt(i) + 1;
             $scope.current = $scope.images[parseInt(i)];
@@ -127,35 +111,7 @@ function ($scope, focus, $timeout, $stateParams, $ionicPopup, i, $cordovaSQLite)
  
 .controller('menuCtrl',
 function ($scope, $stateParams) {})
-/*
-.controller("ExampleController", function($scope, $cordovaSQLite) {
- 
-    $scope.insert = function(firstname, lastname) {
-        var query = "INSERT INTO people (firstname, lastname) VALUES (?,?)";
-        $cordovaSQLite.execute(db, query, [firstname, lastname]).then(function(res) {
-            console.log("INSERT ID -> " + res.insertId);
-        }, function (err) {
-            console.error(err);
-        });
-    }
- 
-    $scope.select = function(lastname) {
-        var query = "SELECT firstname, lastname FROM people WHERE lastname = ?";
-        $cordovaSQLite.execute(db, query, [lastname]).then(function(res) {
-            if(res.rows.length > 0) {
-                console.log("SELECTED -> " + res.rows.item(0).firstname + " " + res.rows.item(0).lastname);
-            } else {
-                console.log("No results found");
-            }
-        }, function (err) {
-            console.error(err);
-        });
-    }
- 
-});
-*/
 
-/*
 .controller('audioCtrl',
 function ($scope, focus, $timeout, $stateParams, $ionicPopup, i, $cordovaMedia, $ionicLoading) {
     $scope.audio = ["http://arabicquick.com/content/uploads/2014/11/ab_a31.mp3",
@@ -248,6 +204,5 @@ function ($scope, focus, $timeout, $stateParams, $ionicPopup, i, $cordovaMedia, 
             media.stop();
 	});
     }    
-}) 
-*/
+})
  
