@@ -28,7 +28,7 @@ angular.module('app', ['ionic','ngCordova','app.controllers', 'app.routes', 'app
     }
     
     db = $cordovaSQLite.openDB({name: 'initialTest.db', location: 'default'});
-    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS snippets (id integer primary key, snippet_no integer, entry text)");
+    $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS snippets (id integer primary key, snippet_no integer, entry text, timestamp datetime)");
   
   });
 })

@@ -75,7 +75,7 @@ function ($scope, focus, $timeout, $stateParams, $ionicPopup, i, $cordovaSQLite)
     $scope.failed = function (){
 	focus('textInput')
         $scope.toClear = "";
-        var query = "INSERT INTO snippets (snippet_no, entry) VALUES (?,?)";
+        var query = "INSERT INTO snippets (timestamp, snippet_no, entry) VALUES (datetime('now'),?,?)";
     	$cordovaSQLite.execute(db, query, [parseInt(i), null]).then(function(res) {
             console.log("INSERT ID -> " + res.insertId);
         }, function (err) {
@@ -100,7 +100,7 @@ function ($scope, focus, $timeout, $stateParams, $ionicPopup, i, $cordovaSQLite)
     $scope.solved = function (){
 	focus('textInput')
         $scope.toClear = "";
-        var query = "INSERT INTO snippets (snippet_no, entry) VALUES (?,?)";
+        var query = "INSERT INTO snippets (timestamp, snippet_no, entry) VALUES (datetime('now'),?,?)";
         var entry = document.getElementById("textInput").value
     	$cordovaSQLite.execute(db, query, [parseInt(i), entry]).then(function(res) {
         	console.log("INSERT ID -> " + res.insertId);
